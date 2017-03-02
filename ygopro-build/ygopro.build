@@ -1,0 +1,38 @@
+#!/bin/sh
+
+font=ttf-bitstream-vera
+
+mkdir binaries
+mkdir binaries/deck
+git clone https://github.com/Fluorohydride/ygopro.git
+cd ygopro 
+git clone https://github.com/Fluorohydride/ygopro-core.git ocgcore
+git clone https://github.com/Fluorohydride/ygopro-scripts.git script
+premake4 gmake
+make -Cbuild
+
+cp bin/debug/ygopro ../binaries/
+cp system.conf ../binaries/
+cp strings.conf ../binaries/
+cp -r textures ../binaries/
+cp -r script ../binaries/
+find ../binaries/textures/*.png -maxdepth 1 -type f -exec pngcrush -ow -rem allb -reduce {} \;
+cd ../binaries/
+apt-get download $font
+unar $font*
+cd $font*
+unar data.tar.gz
+cd ..
+mkdir fonts
+cp $font*/data/usr/share/fonts/truetype/$font/Vera.ttf fonts/vera.ttf
+cp $font*/data/usr/share/fonts/truetype/$font/VeraBd.ttf fonts/verabd.ttf
+rm -r $font*
+sed -e "s/c:\/windows\/fonts\/simsun.ttc/fonts\/vera.ttf/g" system.conf > system.bak
+sed -e "s/c:\/windows\/fonts\/arialbd.ttf/fonts\/verabd.ttf/g" system.bak > system.conf
+rm system.bak
+
+
+
+#Patchers
+#cd ..
+#./devpro-patchers.sh
