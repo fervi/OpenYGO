@@ -24,6 +24,9 @@ love.graphics.setColor( 255, 255, 255)
 font = love.graphics.newFont("lmmonocaps10-regular.otf", 25)
 love.graphics.setFont(font)
 love.graphics.print(text, 30, 30)
+gfx_star = love.graphics.newImage("star.png");
+love.graphics.draw(gfx_star, 300, 66, 0, 1, 1, 0, 0);
+love.graphics.print(stars .. ' * ', 250, 60)
 end
 
 local screenshot = love.graphics.newScreenshot();
