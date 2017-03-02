@@ -4,6 +4,7 @@ font=ttf-bitstream-vera
 
 mkdir binaries
 mkdir binaries/deck
+mkdir binaries/replay
 git clone https://github.com/Fluorohydride/ygopro.git
 cd ygopro 
 git clone https://github.com/Fluorohydride/ygopro-core.git ocgcore
