@@ -21,12 +21,17 @@ love.graphics.rectangle("line", 4, 4, 350, 504)
 gfx_bg = love.graphics.newImage("normalcards.png");
 love.graphics.draw(gfx_bg, 5, 5, 0, 0.435, 0.836, 0, 0)
 love.graphics.setColor( 255, 255, 255)
+
+-- add card name
 font = love.graphics.newFont("lmmonocaps10-regular.otf", 25)
 love.graphics.setFont(font)
-love.graphics.print(text, 30, 30)
+love.graphics.rectangle("line", 10, 10, 337, 30)
+love.graphics.print(text, 12, 7)
+
+-- add stars
 gfx_star = love.graphics.newImage("star.png");
-love.graphics.draw(gfx_star, 300, 66, 0, 1, 1, 0, 0);
-love.graphics.print(stars .. ' * ', 250, 60)
+love.graphics.draw(gfx_star, 320, 45, 0, 1, 1, 0, 0);
+love.graphics.print(stars .. 'x', 290, 38)
 end
 
 local screenshot = love.graphics.newScreenshot();
