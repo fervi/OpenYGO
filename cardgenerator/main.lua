@@ -47,6 +47,8 @@ end
 -- Draw card sprite border
 love.graphics.rectangle("line", (resolution_x/2)-(310/2), 80, 310, 310)
 
+-- Draw card text border
+love.graphics.rectangle("line", (resolution_x/2)-(310/2), 400, 310, 100)
 end
 
 screenshot = love.graphics.newScreenshot();
