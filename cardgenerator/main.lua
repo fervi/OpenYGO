@@ -34,15 +34,15 @@ love.graphics.setColor( 255, 255, 255)
 
 -- add card name
 love.graphics.setFont(fontcardname)
-love.graphics.rectangle("line", 10, 10, 337, 30)
-love.graphics.print(text, 12, 7)
+love.graphics.rectangle("line", (resolution_x/2)-(310/2), 10, 310, 30)
+love.graphics.print(text, 30, 7)
 
 -- add stars
 if(cardtype==1)
 then
 love.graphics.setFont(fontcardtextbig)
-love.graphics.draw(gfx_star, 320, 45, 0, 1, 1, 0, 0);
-love.graphics.print(stars .. 'x', 290, 45)
+love.graphics.draw(gfx_star, 308, 45, 0, 1, 1, 0, 0);
+love.graphics.print(stars .. 'x', 278, 46)
 end
 
 -- Draw card sprite border
