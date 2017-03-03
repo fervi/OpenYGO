@@ -1,7 +1,9 @@
 require("data");
 
 -- Set card resolution
-success = love.window.setMode( 354, 508 )
+resolution_x = 354;
+resolution_y = 508;
+success = love.window.setMode( resolution_x, resolution_y )
 
 -- Add files to project
 fontcardname = love.graphics.newFont("lmmonocaps10-regular.otf", 25)
@@ -42,6 +44,8 @@ love.graphics.draw(gfx_star, 320, 45, 0, 1, 1, 0, 0);
 love.graphics.print(stars .. 'x', 290, 45)
 end
 
+-- Draw card sprite border
+love.graphics.rectangle("line", (resolution_x/2)-(310/2), 80, 310, 310)
 
 end
 
