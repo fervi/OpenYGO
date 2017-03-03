@@ -6,7 +6,7 @@ success = love.window.setMode( 354, 508 )
 -- Add files to project
 fontcardname = love.graphics.newFont("lmmonocaps10-regular.otf", 25)
 fontcardtextbig = love.graphics.newFont("GoMonoRegular.ttf", 20)
-gfx_bg = love.graphics.newImage("normalcards.png");
+gfx_bg = love.graphics.newImage('backgrounds/' .. background .. '.png')
 gfx_star = love.graphics.newImage("star.png");
 
 function love.draw()
