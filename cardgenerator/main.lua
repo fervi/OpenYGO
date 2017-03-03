@@ -8,6 +8,7 @@ success = love.window.setMode( resolution_x, resolution_y )
 -- Add files to project
 fontcardname = love.graphics.newFont("lmmonocaps10-regular.otf", 25)
 fontcardtextbig = love.graphics.newFont("GoMonoRegular.ttf", 20)
+fontcardtext = love.graphics.newFont("GoMonoRegular.ttf", 12)
 gfx_bg = love.graphics.newImage('backgrounds/' .. background .. '.png')
 gfx_star = love.graphics.newImage("star.png");
 
@@ -49,6 +50,10 @@ love.graphics.rectangle("line", (resolution_x/2)-(310/2), 80, 310, 310)
 
 -- Draw card text border
 love.graphics.rectangle("line", (resolution_x/2)-(310/2), 400, 310, 100)
+
+-- Draw card test
+love.graphics.setFont(fontcardtext)
+love.graphics.printf( eftext, 30, 410, 300, "left")
 end
 
 screenshot = love.graphics.newScreenshot();
