@@ -6,11 +6,12 @@ resolution_y = 508;
 success = love.window.setMode( resolution_x, resolution_y )
 
 -- Add files to project
-fontcardname = love.graphics.newFont("lmmonocaps10-regular.otf", 25)
-fontcardtextbig = love.graphics.newFont("GoMonoRegular.ttf", 20)
-fontcardtext = love.graphics.newFont("GoMonoRegular.ttf", 12)
+fontcardname = love.graphics.newFont("fonts/lmmonocaps10-regular.otf", 25)
+fontcardtextbig = love.graphics.newFont("fonts/GoMonoRegular.ttf", 20)
+fontcardtext = love.graphics.newFont("fonts/GoMonoRegular.ttf", 12)
 gfx_bg = love.graphics.newImage('backgrounds/' .. background .. '.png')
-gfx_star = love.graphics.newImage("star.png");
+gfx_star = love.graphics.newImage("sprites/star.png");
+gfx_card = love.graphics.newImage("sprites/cardgraph.png");
 
 function love.draw()
 love.graphics.setColor( 255, 255, 255)
@@ -53,7 +54,12 @@ love.graphics.rectangle("line", (resolution_x/2)-(310/2), 400, 310, 100)
 
 -- Draw card test
 love.graphics.setFont(fontcardtext)
-love.graphics.printf( eftext, 30, 410, 300, "left")
+love.graphics.printf(eftext, 30, 410, 300, "left")
+
+-- Draw card graph
+width = gfx_card:getWidth()
+height = gfx_card:getHeight()
+love.graphics.draw(gfx_card, (resolution_x/2)-(310/2)+1, 81, 0, (310-2)/width, (310-2)/height, 0, 0);
 end
 
 screenshot = love.graphics.newScreenshot();
