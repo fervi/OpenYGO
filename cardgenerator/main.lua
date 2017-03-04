@@ -60,7 +60,16 @@ love.graphics.printf(eftext, 30, 410, 300, "left")
 width = gfx_card:getWidth()
 height = gfx_card:getHeight()
 love.graphics.draw(gfx_card, (resolution_x/2)-(310/2)+1, 81, 0, (310-2)/width, (310-2)/height, 0, 0);
+
+exists = love.filesystem.exists( 'xxx.png' )
+
+if(exists==false)
+then
+exists = love.filesystem.exists( 'xxx.png' )
+screenshot = love.graphics.newScreenshot();
+screenshot:encode('xxx', 'png');
+love.event.push('quit')
 end
 
-screenshot = love.graphics.newScreenshot();
-screenshot:encode("test.png", "png");
+end
+
