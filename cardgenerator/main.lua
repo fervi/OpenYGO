@@ -43,7 +43,15 @@ if(cardtype==1)
 then
 love.graphics.setFont(fontcardtextbig)
 love.graphics.draw(gfx_star, 308, 45, 0, 1, 1, 0, 0);
+
+if(stars>9)
+then
+love.graphics.print(stars .. 'x', 270, 46)
+else
 love.graphics.print(stars .. 'x', 278, 46)
+end
+
+
 end
 
 -- Draw card sprite border
