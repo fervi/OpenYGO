@@ -1,0 +1,20 @@
+My suggestion is:
+
+The minimum level of the monster is 1
+The maximum level of the monster is 10
+
+Each level guarantees a specific number of points awarded to the attack and defense - 700 points on level (which means that a monster with level 1 may be, for example. 200 points of attack, 500 defense).
+
+If the monster has a positive effect (eg. Destroying one opponent's monster), it gets an extra level for it.
+
+If the monster has a negative effect (ie. Can not attack the player directly or after attacking passes to the defense), the level is reduced by 1.
+
+All levels are subjective and will be determined by adding new cards to databases.
+
+_____________
+
+One star (as mentioned) allow you to spend 700 points to statistics. Monster positive effect is treated as powór level 1 lower (ie the monster level 4 has 3 * 700 points = 2,100).
+
+One level allows you to add up to 400 points of attack or defense 500 (ie, the monster level 1 can have 400 points of attack and defense 300, or 200 points of attack and 500 defense).
+
+If there are questions, I recommend opening a new Issue.
