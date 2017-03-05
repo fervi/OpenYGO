@@ -7,6 +7,7 @@ success = love.window.setMode( resolution_x, resolution_y )
 
 -- Add files to project
 fontcardname = love.graphics.newFont("fonts/lmmonocaps10-regular.otf", 25)
+fontcardnamesmall = love.graphics.newFont("fonts/lmmonocaps10-regular.otf", 22)
 fontcardtextbig = love.graphics.newFont("fonts/GoMonoRegular.ttf", 20)
 fontcardtext = love.graphics.newFont("fonts/GoMonoRegular.ttf", 12)
 gfx_bg = love.graphics.newImage('backgrounds/' .. background .. '.png')
@@ -35,8 +36,18 @@ love.graphics.setColor( 255, 255, 255)
 
 -- add card name
 love.graphics.setFont(fontcardname)
+local font = love.graphics.getFont()
+local width = font:getWidth(text)
 love.graphics.rectangle("line", (resolution_x/2)-(310/2), 10, 310, 30)
-love.graphics.print(text, 30, 7)
+
+if(width<300)
+then
+love.graphics.print(text, 25, 7)
+else
+love.graphics.setFont(fontcardnamesmall)
+love.graphics.print(text, 25, 7)
+end
+
 
 -- add stars
 if(cardtype==1)
@@ -51,7 +62,16 @@ else
 love.graphics.print(stars .. 'x', 278, 46)
 end
 
+end
 
+if(cardtype==2)
+then
+love.graphics.print('[SPELL CARD]', 194, 42)
+end
+
+if(cardtype==3)
+then
+love.graphics.print('[TRAP CARD]', 206, 42)
 end
 
 -- Draw card sprite border
@@ -62,7 +82,7 @@ love.graphics.rectangle("line", (resolution_x/2)-(310/2), 400, 310, 100)
 
 -- Draw card test
 love.graphics.setFont(fontcardtext)
-love.graphics.printf(eftext, 30, 410, 300, "left")
+love.graphics.printf(eftext, 25, 405, 300, "left")
 
 -- Draw card graph
 width = gfx_card:getWidth()
