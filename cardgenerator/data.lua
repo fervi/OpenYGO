@@ -6,3 +6,5 @@ stars = 8;
 cardtype = 3;
 background = "spellcards";
 eftext = "blablabla";
+
+--type:
