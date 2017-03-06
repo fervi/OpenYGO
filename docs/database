@@ -1,0 +1,21 @@
+datas:
+____________________
+id - probably just unique card number id
+ot - unknown
+alias - unknown
+setcode - unknown
+type - unknown (probably card type - 17 spellcaster?)
+atk - monster attack
+def - monster defense
+level - monster level
+race - unknown
+attribute - unknown
+category - unknown
+
+
+texts:
+____________________
+id - the same as in data
+name - Cards name
+desc - Cards description
+str1 ... 16 - unknown

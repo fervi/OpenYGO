@@ -9,7 +9,7 @@ success = love.window.setMode( resolution_x, resolution_y )
 fontcardname = love.graphics.newFont("fonts/lmmonocaps10-regular.otf", 25)
 fontcardnamesmall = love.graphics.newFont("fonts/lmmonocaps10-regular.otf", 22)
 fontcardtextbig = love.graphics.newFont("fonts/GoMonoRegular.ttf", 20)
-fontcardtext = love.graphics.newFont("fonts/GoMonoRegular.ttf", 12)
+fontcardtext = love.graphics.newFont("fonts/GoMonoRegular.ttf", 10)
 gfx_star = love.graphics.newImage("sprites/star.png");
 gfx_card = love.graphics.newImage("sprites/cardgraph.png");
 
