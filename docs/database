@@ -1,7 +1,7 @@
 datas:
 ____________________
 id - probably just unique card number id
-ot - unknown
+ot - Cards releasing type (OCG - 1, TCG - 2, All - 3)
 alias - unknown
 setcode - unknown
 type - unknown (probably card type - 17 spellcaster?)
