@@ -8,7 +8,7 @@ type - unknown (probably card type - 17 spellcaster?)
 atk - monster attack
 def - monster defense
 level - monster level
-race - unknown
+race - monster card race (1 - warrior ...)
 attribute - unknown
 category - unknown
 
