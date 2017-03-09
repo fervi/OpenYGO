@@ -37,9 +37,10 @@ then
 --love.graphics.setColor(185, 165, 75)
 
 local greyscale = gradient {
-    direction = 'vertical';
+    direction = 'horizontal';
     {185, 165, 75};
     {255, 255, 255};
+    {0, 0, 0};
 }
 
 drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
@@ -70,7 +71,7 @@ then
 love.graphics.setColor(94, 110, 169)
 end
 
---love.graphics.rectangle("fill", 5, 5, 999, 999)
+love.graphics.rectangle("fill", 5, 5, 999, 999)
 love.graphics.setColor(255, 255, 255)
 
 -- add card name
@@ -117,11 +118,25 @@ end
 love.graphics.rectangle("line", (resolution_x/2)-(310/2), 80, 310, 310)
 
 -- Draw card text border
+if(cardtype==2 or cardtype==3)
+then
 love.graphics.rectangle("line", (resolution_x/2)-(310/2), 400, 310, 100)
+else
+love.graphics.rectangle("line", (resolution_x/2)-(310/2), 400, 255, 100)
+love.graphics.rectangle("line", 278, 400, 50, 100)
+end
+
 
 -- Draw card test
 love.graphics.setFont(fontcardtext)
+if(cardtype==2 or cardtype==3)
+then
 love.graphics.printf(eftext, 25, 405, 300, "left")
+else
+love.graphics.printf(eftext, 25, 405, 250, "left")
+love.graphics.setFont(fontcardtextbig)
+love.graphics.printf("ATK:\n" .. atk .. "\nDEF:\n" .. def, 279, 405, 50, "left")
+end
 
 -- Draw card graph
 width = gfx_card:getWidth()
