@@ -1,4 +1,5 @@
 require("data");
+require("gradient");
 
 -- Set card resolution
 resolution_x = 354;
@@ -33,7 +34,15 @@ love.graphics.rectangle("line", 4, 4, 350, 504)
 
 if(cardtype==1)
 then
-love.graphics.setColor(185, 165, 75)
+--love.graphics.setColor(185, 165, 75)
+
+local greyscale = gradient {
+    direction = 'vertical';
+    {185, 165, 75};
+    {255, 255, 255};
+}
+
+drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 end
 
 if(cardtype==2)
@@ -61,7 +70,7 @@ then
 love.graphics.setColor(94, 110, 169)
 end
 
-love.graphics.rectangle("fill", 5, 5, 999, 999)
+--love.graphics.rectangle("fill", 5, 5, 999, 999)
 love.graphics.setColor(255, 255, 255)
 
 -- add card name
