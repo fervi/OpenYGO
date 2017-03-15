@@ -85,7 +85,7 @@ then
 love.graphics.print(text, 25, 7)
 else
 love.graphics.setFont(fontcardnamesmall)
-love.graphics.print(text, 25, 7)
+love.graphics.print(text, 25, 9)
 end
 
 
@@ -127,7 +127,7 @@ love.graphics.rectangle("line", 278, 400, 55, 100)
 end
 
 
--- Draw card test
+-- Draw card text
 love.graphics.setFont(fontcardtext)
 if(cardtype==2 or cardtype==3)
 then

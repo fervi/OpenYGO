@@ -1,6 +1,6 @@
-bot = false;
+bot = true;
 
-text = "Swords of Revealing Light";
+text = "Swords";
 stars = 8;
 -- 1 - monster, 2 - spell, 3 - trap, 4 - effect, 5 - fusion, 6 - ritual
 cardtype = 1;
