@@ -12,7 +12,7 @@ fontcardnamesmall = love.graphics.newFont("fonts/lmmonocaps10-regular.otf", 22)
 fontcardtextbig = love.graphics.newFont("fonts/GoMonoRegular.ttf", 20)
 fontcardtext = love.graphics.newFont("fonts/GoMonoRegular.ttf", 10)
 gfx_star = love.graphics.newImage("sprites/star.png");
-gfx_card = love.graphics.newImage("sprites/cardgraph.png");
+gfx_card = love.graphics.newImage("sprites/cardgraph.jpg");
 
 function love.draw()
 love.graphics.setColor(255, 255, 255)
@@ -34,13 +34,11 @@ love.graphics.rectangle("line", 4, 4, 350, 504)
 
 if(cardtype==1)
 then
---love.graphics.setColor(185, 165, 75)
 
 local greyscale = gradient {
     direction = 'horizontal';
-    {185, 165, 75};
-    {255, 255, 255};
-    {0, 0, 0};
+    {176, 176, 83};
+    {165, 132, 51};
 }
 
 drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
@@ -48,30 +46,64 @@ end
 
 if(cardtype==2)
 then
-love.graphics.setColor(15, 129, 130)
+
+local greyscale = gradient {
+    direction = 'horizontal';
+    {93, 161, 140};
+    {64, 85, 70};
+}
+
+drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 end
 
 if(cardtype==3)
 then
-love.graphics.setColor(122, 67, 96)
+
+local greyscale = gradient {
+    direction = 'horizontal';
+    {205, 140, 170};
+    {124, 66, 107};
+}
+
+drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 end
 
 if(cardtype==4)
 then
-love.graphics.setColor(191, 116, 76)
+
+local greyscale = gradient {
+    direction = 'horizontal';
+    {184, 133, 93};
+    {168, 85, 51};
+}
+
+drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 end
 
 if(cardtype==5)
 then
-love.graphics.setColor(135, 78, 159)
+
+local greyscale = gradient {
+    direction = 'horizontal';
+    {123, 76, 154};
+    {103, 80, 122};
+}
+
+drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 end
 
 if(cardtype==6)
 then
-love.graphics.setColor(94, 110, 169)
+
+local greyscale = gradient {
+    direction = 'horizontal';
+    {107, 117, 170};
+    {65, 74, 91};
+}
+
+drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 end
 
---love.graphics.rectangle("fill", 5, 5, 999, 999)
 love.graphics.setColor(255, 255, 255)
 
 -- add card name
@@ -106,12 +138,12 @@ end
 
 if(cardtype==2)
 then
-love.graphics.print('[SPELL CARD]', 194, 42)
+love.graphics.print('[SPELL CARD]', 182, 42)
 end
 
 if(cardtype==3)
 then
-love.graphics.print('[TRAP CARD]', 206, 42)
+love.graphics.print('[TRAP CARD]', 195, 42)
 end
 
 -- Draw card sprite border
@@ -145,13 +177,13 @@ love.graphics.draw(gfx_card, (resolution_x/2)-(310/2)+1, 81, 0, (310-2)/width, (
 
 if(bot==true)
 then
-exists = love.filesystem.exists( 'xxx.png' )
+exists = love.filesystem.exists( 'xxx.jpg' )
 
 if(exists==false)
 then
-exists = love.filesystem.exists( 'xxx.png' )
+exists = love.filesystem.exists( 'xxx.jpg' )
 screenshot = love.graphics.newScreenshot();
-screenshot:encode('xxx', 'png');
+screenshot:encode('xxx.jpg', 'jpg');
 love.event.push('quit')
 end
 end
