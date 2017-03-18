@@ -165,7 +165,7 @@ if(cardtype==2 or cardtype==3)
 then
 love.graphics.printf(eftext, 25, 405, 300, "left")
 else
-love.graphics.printf(eftext, 25, 405, 250, "left")
+love.graphics.printf("[ " .. typename .. cardtypename .. " ]" .. "\n" .. eftext, 25, 405, 250, "left")
 love.graphics.setFont(fontcardtextbig)
 love.graphics.printf("ATK:\n" .. atk .. "\nDEF:\n" .. def, 281, 405, 50, "left")
 end
