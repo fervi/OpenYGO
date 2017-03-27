@@ -184,7 +184,8 @@ then
 exists = love.filesystem.exists( 'xxx.jpg' )
 screenshot = love.graphics.newScreenshot();
 screenshot:encode('xxx.jpg', 'jpg');
-love.filesystem.write("aaa", 'INSERT INTO "datas" VALUES(11111,3,0,0,111111,0,0,0,0,0,1);')
+love.filesystem.write("aaa", 'INSERT INTO "datas" VALUES(11111,3,0,0,111111,0,0,0,'..type..',0,1);\n')
+love.filesystem.write("bbb", "INSERT INTO 'texts' VALUES(11111,'"..text.."','Blablabla','','','','','','','','','','','','','','','','');")
 love.event.push('quit')
 end
 end

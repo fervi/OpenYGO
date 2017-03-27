@@ -35,3 +35,4 @@ CREATE TABLE 'texts' (
     'str16'	varchar(256),
     PRIMARY KEY(id)
 );
+
