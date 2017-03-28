@@ -32,7 +32,8 @@ love.graphics.rectangle("line", 4, 4, 350, 504)
 
 -- add card background
 
-if(cardtype==1)
+-- normal
+if(cardtype==17)
 then
 
 local greyscale = gradient {
@@ -44,7 +45,8 @@ local greyscale = gradient {
 drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 end
 
-if(cardtype==2)
+-- spell
+if((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or (cardtype==262146 or cardtype==524290)
 then
 
 local greyscale = gradient {
@@ -56,7 +58,8 @@ local greyscale = gradient {
 drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 end
 
-if(cardtype==3)
+-- trap
+if((cardtype==4 or cardtype==131076) or cardtype==1048580)
 then
 
 local greyscale = gradient {
@@ -68,7 +71,8 @@ local greyscale = gradient {
 drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 end
 
-if(cardtype==4)
+-- effect
+if(((cardtype==33 or cardtype==545) or (cardtype==1057 or cardtype==2081)) or (cardtype==2097185 or cardtype==4194337))
 then
 
 local greyscale = gradient {
@@ -80,7 +84,8 @@ local greyscale = gradient {
 drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 end
 
-if(cardtype==5)
+-- fusion
+if(cardtype==65 or cardtype==97)
 then
 
 local greyscale = gradient {
@@ -92,7 +97,8 @@ local greyscale = gradient {
 drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 end
 
-if(cardtype==6)
+-- ritual
+if(cardtype==129 or cardtype==161) or (cardtype==673)
 then
 
 local greyscale = gradient {
@@ -122,8 +128,19 @@ end
 
 
 -- add stars
-if((cardtype==1 or cardtype==4) or (cardtype==5 or cardtype==6))
+
+if(((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or (cardtype==262146 or cardtype==524290) or ((cardtype==4 or cardtype==131076) or cardtype==1048580))
 then
+if((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or (cardtype==262146 or cardtype==524290)
+then
+love.graphics.print('[SPELL CARD]', 182, 42)
+end
+
+if((cardtype==4 or cardtype==131076) or cardtype==1048580)
+then
+love.graphics.print('[TRAP CARD]', 195, 42)
+end
+else
 love.graphics.setFont(fontcardtextbig)
 love.graphics.draw(gfx_star, 308, 45, 0, 1, 1, 0, 0);
 
@@ -134,23 +151,14 @@ else
 love.graphics.print(stars .. 'x', 278, 46)
 end
 
-end
 
-if(cardtype==2)
-then
-love.graphics.print('[SPELL CARD]', 182, 42)
-end
-
-if(cardtype==3)
-then
-love.graphics.print('[TRAP CARD]', 195, 42)
 end
 
 -- Draw card sprite border
 love.graphics.rectangle("line", (resolution_x/2)-(310/2), 80, 310, 310)
 
 -- Draw card text border
-if(cardtype==2 or cardtype==3)
+if(((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or (cardtype==262146 or cardtype==524290) or ((cardtype==4 or cardtype==131076) or cardtype==1048580))
 then
 love.graphics.rectangle("line", (resolution_x/2)-(310/2), 400, 310, 100)
 else
@@ -161,7 +169,7 @@ end
 
 -- Draw card text
 love.graphics.setFont(fontcardtext)
-if(cardtype==2 or cardtype==3)
+if(((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or (cardtype==262146 or cardtype==524290) or ((cardtype==4 or cardtype==131076) or cardtype==1048580))
 then
 love.graphics.printf(eftext, 25, 405, 300, "left")
 else
@@ -177,18 +185,16 @@ love.graphics.draw(gfx_card, (resolution_x/2)-(310/2)+1, 81, 0, (310-2)/width, (
 
 if(bot==true)
 then
-exists = love.filesystem.exists( 'xxx.jpg' )
+exists = love.filesystem.exists( id..'.jpg' )
 
 if(exists==false)
 then
-exists = love.filesystem.exists( 'xxx.jpg' )
+exists = love.filesystem.exists( id..'.jpg' )
 screenshot = love.graphics.newScreenshot();
-screenshot:encode('xxx.jpg', 'jpg');
-love.filesystem.write("aaa", 'INSERT INTO "datas" VALUES(11111,3,0,0,111111,0,0,0,'..type..',0,1);\n')
-love.filesystem.write("bbb", "INSERT INTO 'texts' VALUES(11111,'"..text.."','Blablabla','','','','','','','','','','','','','','','','');")
+screenshot:encode(id..'.jpg', 'jpg');
+love.filesystem.write("aaa", 'INSERT INTO "datas" VALUES('..id..',3,'..link..','..cardtype..','..atk..','..def..','..stars..','..type..',0,1);\n'.."INSERT INTO 'texts' VALUES("..id..",'"..text.."','"..eftext.."','','','','','','','','','','','','','','','','');\n")
 love.event.push('quit')
 end
 end
 
 end
-
