@@ -128,7 +128,6 @@ end
 
 
 -- add stars
-
 if(((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or (cardtype==262146 or cardtype==524290) or ((cardtype==4 or cardtype==131076) or cardtype==1048580))
 then
 if((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or (cardtype==262146 or cardtype==524290)
@@ -143,14 +142,47 @@ end
 else
 love.graphics.setFont(fontcardtextbig)
 love.graphics.draw(gfx_star, 308, 45, 0, 1, 1, 0, 0);
+love.graphics.setFont(fontcardnamesmall)
 
 if(stars>9)
 then
-love.graphics.print(stars .. 'x', 270, 46)
+love.graphics.print(stars .. 'x', 270, 42)
 else
-love.graphics.print(stars .. 'x', 278, 46)
+love.graphics.print(stars .. 'x', 278, 42)
 end
 
+end
+
+-- Add card attribute
+if(attribute~=0)
+then
+love.graphics.print(attrname, 21, 42)
+else
+
+if(cardtype==65538)
+then
+love.graphics.print("Quick-Play", 21, 42)
+end
+
+if(cardtype==131074 or cardtype==131076)
+then
+love.graphics.print("Continuous", 21, 42)
+end
+
+if(cardtype==262146)
+then
+love.graphics.print("Equip", 21, 42)
+end
+
+if(cardtype==524290)
+then
+love.graphics.print("Field", 21, 42)
+end
+
+if(cardtype==1048580)
+then
+love.graphics.print("Counter", 21, 42)
+end
 
 end
 
@@ -192,7 +224,7 @@ then
 exists = love.filesystem.exists( id..'.jpg' )
 screenshot = love.graphics.newScreenshot();
 screenshot:encode(id..'.jpg', 'jpg');
-love.filesystem.write("aaa", 'INSERT INTO "datas" VALUES('..id..',3,'..link..','..cardtype..','..atk..','..def..','..stars..','..type..',0,1);\n'.."INSERT INTO 'texts' VALUES("..id..",'"..text.."','"..eftext.."','','','','','','','','','','','','','','','','');\n")
+love.filesystem.write("aaa", 'INSERT INTO "datas" VALUES('..id..',3,'..link..','..cardtype..','..atk..','..def..','..stars..','..type..','..attribute..',0);\n'.."INSERT INTO 'texts' VALUES("..id..",'"..text.."','"..eftext.."','','','','','','','','','','','','','','','','');\n")
 love.event.push('quit')
 end
 end

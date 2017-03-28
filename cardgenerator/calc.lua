@@ -250,35 +250,35 @@ end
 
 if(attribute==1)
 then
-cardtypename = "Earth"
+attrname = "Earth"
 end
 
 if(attribute==2)
 then
-cardtypename = "Water"
+attrname = "Water"
 end
 
 if(attribute==4)
 then
-cardtypename = "Fire"
+attrname = "Fire"
 end
 
 if(attribute==8)
 then
-cardtypename = "Wind"
+attrname = "Wind"
 end
 
 if(attribute==16)
 then
-cardtypename = "Light"
+attrname = "Light"
 end
 
 if(attribute==32)
 then
-cardtypename = "Dark"
+attrname = "Dark"
 end
 
 if(attribute==64)
 then
-cardtypename = "Divine"
+attrname = "Divine"
 end
