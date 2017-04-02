@@ -2,33 +2,33 @@ require("data");
 require("gradient");
 
 -- Set card resolution
-resolution_x = 177;
-resolution_y = 254;
+resolution_x = 354;
+resolution_y = 508;
 success = love.window.setMode( resolution_x, resolution_y )
 
 -- Add files to project
-fontcardname = love.graphics.newFont("fonts/lmmonocaps10-regular.otf", 12)
-fontcardnamesmall = love.graphics.newFont("fonts/lmmonocaps10-regular.otf", 1)
-fontcardtextbig = love.graphics.newFont("fonts/GoMonoRegular.ttf", 10)
-fontcardtext = love.graphics.newFont("fonts/GoMonoRegular.ttf", 5)
+fontcardname = love.graphics.newFont("fonts/lmmonocaps10-regular.otf", 25)
+fontcardnamesmall = love.graphics.newFont("fonts/lmmonocaps10-regular.otf", 22)
+fontcardtextbig = love.graphics.newFont("fonts/GoMonoRegular.ttf", 20)
+fontcardtext = love.graphics.newFont("fonts/GoMonoRegular.ttf", 10)
 gfx_star = love.graphics.newImage("sprites/star.png");
 gfx_card = love.graphics.newImage("sprites/cardgraph.jpg");
 
 function love.draw()
 love.graphics.setColor(255, 255, 255)
-love.graphics.rectangle("fill", 0, 0, 177, 254)
+love.graphics.rectangle("fill", 0, 0, 354, 508)
 
 -- border
 love.graphics.setColor(0, 0, 0)
-love.graphics.rectangle("line", 0, 0, 177, 254)
+love.graphics.rectangle("line", 0, 0, 354, 508)
 love.graphics.setColor(20, 20, 20)
-love.graphics.rectangle("line", 1, 1, 176, 253)
+love.graphics.rectangle("line", 1, 1, 353, 507)
 love.graphics.setColor(40, 40, 40)
-love.graphics.rectangle("line", 2, 2, 175, 252)
+love.graphics.rectangle("line", 2, 2, 352, 506)
 love.graphics.setColor(60, 60, 60)
-love.graphics.rectangle("line", 3, 3, 174, 251)
+love.graphics.rectangle("line", 3, 3, 351, 505)
 love.graphics.setColor(80, 80, 80)
-love.graphics.rectangle("line", 4, 4, 173, 250)
+love.graphics.rectangle("line", 4, 4, 350, 504)
 
 -- add card background
 
@@ -116,14 +116,14 @@ love.graphics.setColor(255, 255, 255)
 love.graphics.setFont(fontcardname)
 local font = love.graphics.getFont()
 local width = font:getWidth(text)
-love.graphics.rectangle("line", (resolution_x/2)-(155/2), 5, 155, 15)
+love.graphics.rectangle("line", (resolution_x/2)-(310/2), 10, 310, 30)
 
 if(width<300)
 then
-love.graphics.print(text, 12, 3)
+love.graphics.print(text, 25, 7)
 else
 love.graphics.setFont(fontcardnamesmall)
-love.graphics.print(text, 12, 4)
+love.graphics.print(text, 25, 9)
 end
 
 
@@ -132,71 +132,70 @@ if(((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or 
 then
 if((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or (cardtype==262146 or cardtype==524290)
 then
-love.graphics.print('[SPELL CARD]', 95, 24)
+love.graphics.print('[SPELL CARD]', 182, 42)
 end
 
 if((cardtype==4 or cardtype==131076) or cardtype==1048580)
 then
-love.graphics.print('[TRAP CARD]', 95, 24)
+love.graphics.print('[TRAP CARD]', 195, 42)
 end
 else
 love.graphics.setFont(fontcardtextbig)
-love.graphics.draw(gfx_star, 154, 24, 0, 0.5, 0.5, 0, 0);
+love.graphics.draw(gfx_star, 308, 45, 0, 1, 1, 0, 0);
+love.graphics.setFont(fontcardnamesmall)
 
-love.graphics.setFont(fontcardtextbig)
 if(stars>9)
 then
-love.graphics.print(stars .. 'x', 135, 24)
+love.graphics.print(stars .. 'x', 270, 42)
 else
-love.graphics.print(stars .. 'x', 140, 24)
+love.graphics.print(stars .. 'x', 278, 42)
 end
 
 end
---love.graphics.setFont(fontcardnamesmall)
+
 -- Add card attribute
 if(attribute~=0)
 then
-
-love.graphics.print(attrname, 10, 24)
+love.graphics.print(attrname, 21, 42)
 else
 
 if(cardtype==65538)
 then
-love.graphics.print("Quick-Play", 10, 24)
+love.graphics.print("Quick-Play", 21, 42)
 end
 
 if(cardtype==131074 or cardtype==131076)
 then
-love.graphics.print("Continuous", 10, 24)
+love.graphics.print("Continuous", 21, 42)
 end
 
 if(cardtype==262146)
 then
-love.graphics.print("Equip", 10, 24)
+love.graphics.print("Equip", 21, 42)
 end
 
 if(cardtype==524290)
 then
-love.graphics.print("Field", 10, 24)
+love.graphics.print("Field", 21, 42)
 end
 
 if(cardtype==1048580)
 then
-love.graphics.print("Counter", 10, 24)
+love.graphics.print("Counter", 21, 42)
 end
 
 end
 
 -- Draw card sprite border
-love.graphics.rectangle("line", (resolution_x/2)-(155/2), 40, 155, 155)
+love.graphics.rectangle("line", (resolution_x/2)-(310/2), 80, 310, 310)
 
 -- Draw card text border
 if(((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or (cardtype==262146 or cardtype==524290) or ((cardtype==4 or cardtype==131076) or cardtype==1048580))
 then
-love.graphics.rectangle("line", (resolution_x/2)-(155/2), 200, 155, 50)
+love.graphics.rectangle("line", (resolution_x/2)-(310/2), 400, 310, 100)
 else
-love.graphics.rectangle("line", (resolution_x/2)-(155/2), 200, 155, 50)
-love.graphics.rectangle("line", 139, 200, 27, 50)
+love.graphics.rectangle("line", (resolution_x/2)-(310/2), 400, 255, 100)
+love.graphics.rectangle("line", 278, 400, 55, 100)
 end
 
 
@@ -204,17 +203,17 @@ end
 love.graphics.setFont(fontcardtext)
 if(((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or (cardtype==262146 or cardtype==524290) or ((cardtype==4 or cardtype==131076) or cardtype==1048580))
 then
-love.graphics.printf(eftext, 12, 202, 150, "left")
+love.graphics.printf(eftext, 25, 405, 300, "left")
 else
-love.graphics.printf("[ " .. typename .. " " .. cardtypename .. " ]" .. "\n" .. eftext, 12, 202, 125, "left")
+love.graphics.printf("[ " .. typename .. " " .. cardtypename .. " ]" .. "\n" .. eftext, 25, 405, 250, "left")
 love.graphics.setFont(fontcardtextbig)
-love.graphics.printf("ATK:\n" .. atk .. "\nDEF:\n" .. def, 140, 202, 25, "left")
+love.graphics.printf("ATK:\n" .. atk .. "\nDEF:\n" .. def, 281, 405, 50, "left")
 end
 
 -- Draw card graph
 width = gfx_card:getWidth()
 height = gfx_card:getHeight()
-love.graphics.draw(gfx_card, (resolution_x/2)-(155/2)+1, 40, 0, (155-2)/width, (155-2)/height, 0, 0);
+love.graphics.draw(gfx_card, (resolution_x/2)-(310/2)+1, 81, 0, (310-2)/width, (310-2)/height, 0, 0);
 
 if(bot==true)
 then
