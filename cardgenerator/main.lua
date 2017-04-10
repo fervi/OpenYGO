@@ -12,7 +12,7 @@ fontcardnamesmall = love.graphics.newFont("fonts/lmmonocaps10-regular.otf", 1)
 fontcardtextbig = love.graphics.newFont("fonts/GoMonoRegular.ttf", 10)
 fontcardtext = love.graphics.newFont("fonts/GoMonoRegular.ttf", 5)
 gfx_star = love.graphics.newImage("sprites/star.png");
-gfx_card = love.graphics.newImage("sprites/cardgraph.jpg");
+gfx_card = love.graphics.newImage("sprites/cardgraph.png");
 
 function love.draw()
 love.graphics.setColor(255, 255, 255)
