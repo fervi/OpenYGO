@@ -1,5 +1,6 @@
 require("data");
 require("gradient");
+require("calc");
 
 -- Set card resolution
 resolution_x = 177;
