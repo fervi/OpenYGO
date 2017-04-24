@@ -14,5 +14,3 @@ def = 1200;
 type=1
 -- 0 - trap; spell, 1 - earth, 2 - water, 4 - fire, 8 - wind, 16 - light, 32 - dark, 64 - divine
 attribute=2
-
-require("calc");
