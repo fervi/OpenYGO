@@ -1,3 +1,4 @@
+i=1;
 while [ -s cardb ]; do
 line=$(head -n 1 cardb)
 cp cardgenscripts/$line.lua ../cardgenerator/data.lua
@@ -11,4 +12,6 @@ sed '1d' cardb > cardb.tmp
 rm cardb
 rm /home/$USER/.local/share/love/cardgenerator/aa
 mv cardb.tmp cardb
+cp scripts/$line.lua build/$i.lua
+i=$i+1;
 done
