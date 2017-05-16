@@ -8,7 +8,7 @@ mkdir binaries/replay
 git clone https://github.com/Fluorohydride/ygopro.git
 cd ygopro 
 git clone https://github.com/Fluorohydride/ygopro-core.git ocgcore
-git clone https://github.com/Fluorohydride/ygopro-scripts.git script
+#git clone https://github.com/Fluorohydride/ygopro-scripts.git script
 premake4 gmake
 make -Cbuild
 
