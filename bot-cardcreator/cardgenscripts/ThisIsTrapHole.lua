@@ -1,4 +1,4 @@
-id=1
+id=1001
 link=0
 text = "This is Trap Hole!";
 stars = 0;

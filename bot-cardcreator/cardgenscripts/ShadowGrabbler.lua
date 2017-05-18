@@ -1,8 +1,8 @@
-id=2;
+id=1002;
 link=0;
 text = "Shadow Grabbler";
 stars = 3;
-cardtype = 33;
+cardtype = 2097185;
 eftext = "FLIP: Target 1 monster on the field, destroy it.";
 atk=500;
 def=700;
