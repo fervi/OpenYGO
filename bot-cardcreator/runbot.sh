@@ -66,4 +66,5 @@ done
 
 cat emptydb card-database > carddb.tmp
 sqlite3 cards.cdb < carddb.tmp
+jpegoptim -f build/*.jpg
 rm card-database cardb carddb.tmp emptydb
