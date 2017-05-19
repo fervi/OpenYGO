@@ -38,6 +38,8 @@ CREATE TABLE 'texts' (
 
 " > emptydb
 
+mkdir build
+mkdir build/thumbnail
 cd cardgenscripts
 ls  > ../cardb.tmp
 sed -e "s/.lua//g" ../cardb.tmp > ../cardb
@@ -59,6 +61,7 @@ rm /home/$USER/.local/share/love/cardgenerator/aa
 mv cardb.tmp cardb
 source cardgenscripts/$line.lua
 cp scripts/$line.lua build/c$id.lua
+convert build/$id.jpg -resize 44x64 build/thumbnail/$id.jpg
 done
 
 cat emptydb card-database > carddb.tmp
