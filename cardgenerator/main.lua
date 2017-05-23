@@ -134,12 +134,12 @@ if(((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or 
 then
 if((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or (cardtype==262146 or cardtype==524290)
 then
-love.graphics.print('[SPELL CARD]', 95, 24)
+love.graphics.print('[SPELL CARD]', 97, 20)
 end
 
 if((cardtype==4 or cardtype==131076) or cardtype==1048580)
 then
-love.graphics.print('[TRAP CARD]', 95, 24)
+love.graphics.print('[TRAP CARD]', 103, 20)
 end
 else
 love.graphics.setFont(fontcardtextbig)
