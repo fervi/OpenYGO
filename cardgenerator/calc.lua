@@ -1,251 +1,251 @@
-if(type==1)
+if(race==1)
 then
-typename = "Warrior"
+racename = "Warrior"
 end
 
-if(type==2)
+if(race==2)
 then
-typename = "Spellcaster"
+racename = "Spellcaster"
 end
 
-if(type==4)
+if(race==4)
 then
-typename = "Fairy"
+racename = "Fairy"
 end
 
-if(type==8)
+if(race==8)
 then
-typename = "Fiend"
+racename = "Fiend"
 end
 
-if(type==16)
+if(race==16)
 then
-typename = "Zombie"
+racename = "Zombie"
 end
 
-if(type==32)
+if(race==32)
 then
-typename = "Machine"
+racename = "Machine"
 end
 
-if(type==64)
+if(race==64)
 then
-typename = "Aqua"
+racename = "Aqua"
 end
 
-if(type==128)
+if(race==128)
 then
-typename = "Pyro"
+racename = "Pyro"
 end
 
-if(type==256)
+if(race==256)
 then
-typename = "Rock"
+racename = "Rock"
 end
 
-if(type==512)
+if(race==512)
 then
-typename = "Winged Beast"
+racename = "Winged Beast"
 end
 
-if(type==1024)
+if(race==1024)
 then
-typename = "Plant"
+racename = "Plant"
 end
 
-if(type==2048)
+if(race==2048)
 then
-typename = "Insect"
+racename = "Insect"
 end
 
-if(type==4096)
+if(race==4096)
 then
-typename = "Thunder"
+racename = "Thunder"
 end
 
-if(type==8192)
+if(race==8192)
 then
-typename = "Dragon"
+racename = "Dragon"
 end
 
-if(type==16384)
+if(race==16384)
 then
-typename = "Beast"
+racename = "Beast"
 end
 
-if(type==32768)
+if(race==32768)
 then
-typename = "Beast Warrior"
+racename = "Beast Warrior"
 end
 
-if(type==65536)
+if(race==65536)
 then
-typename = "Dinosaur"
+racename = "Dinosaur"
 end
 
-if(type==131072)
+if(race==131072)
 then
-typename = "Fish"
+racename = "Fish"
 end
 
-if(type==262144)
+if(race==262144)
 then
-typename = "Sea Serpent"
+racename = "Sea Serpent"
 end
 
-if(type==524288)
+if(race==524288)
 then
-typename = "Reptile"
+racename = "Reptile"
 end
 
-if(type==1048576)
+if(race==1048576)
 then
-typename = "Psychic"
+racename = "Psychic"
 end
 
-if(type==2097152)
+if(race==2097152)
 then
-typename = "Divine Beast"
+racename = "Divine Beast"
 end
 
-if(type==4194304)
+if(race==4194304)
 then
-typename = "Creator God"
+racename = "Creator God"
 end
 
-if(type==8388608)
+if(race==8388608)
 then
-typename = "Wyrm"
+racename = "Wyrm"
 end
 
-if(cardtype==17)
+if(type==17)
 then
-cardtypename = ""
+typename = ""
 end
 
-if(cardtype==33)
+if(type==33)
 then
-cardtypename = "/ Effect"
+typename = "/ Effect"
 end
 
-if(cardtype==65)
+if(type==65)
 then
-cardtypename = "/ Fusion"
+typename = "/ Fusion"
 end
 
-if(cardtype==97)
+if(type==97)
 then
-cardtypename = "/ Fusion / Effect"
+typename = "/ Fusion / Effect"
 end
 
-if(cardtype==129)
+if(type==129)
 then
-cardtypename = "/ Ritual"
+typename = "/ Ritual"
 end
 
-if(cardtype==161)
+if(type==161)
 then
-cardtypename = "/ Ritual / Effect"
+typename = "/ Ritual / Effect"
 end
 
-if(cardtype==545)
+if(type==545)
 then
-cardtypename = "/ Spirit / Effect"
+typename = "/ Spirit / Effect"
 end
 
-if(cardtype==673)
+if(type==673)
 then
-cardtypename = "/ Spirit / Ritual / Effect"
+typename = "/ Spirit / Ritual / Effect"
 end
 
-if(cardtype==1057)
+if(type==1057)
 then
-cardtypename = "/ Union / Effect"
+typename = "/ Union / Effect"
 end
 
-if(cardtype==2081)
+if(type==2081)
 then
-cardtypename = "/ Gemini / Effect"
+typename = "/ Gemini / Effect"
 end
 
-if(cardtype==8193)
+if(type==8193)
 then
-cardtypename = "/ Synchro"
+typename = "/ Synchro"
 end
 
-if(cardtype==8225)
+if(type==8225)
 then
-cardtypename = "/ Synchro / Effect"
+typename = "/ Synchro / Effect"
 end
 
-if(cardtype==12321)
+if(type==12321)
 then
-cardtypename = "/ Tuner / Synchro / Effect"
+typename = "/ Tuner / Synchro / Effect"
 end
 
-if(cardtype==16385 or cardtype==16401)
+if(type==16385 or type==16401)
 then
-cardtypename = "/ Token"
+typename = "/ Token"
 end
 
-if(cardtype==2097185)
+if(type==2097185)
 then
-cardtypename = "/ Flip / Effect"
+typename = "/ Flip / Effect"
 end
 
-if(cardtype==2101281)
+if(type==2101281)
 then
-cardtypename = "/ Tuner / Flip / Effect"
+typename = "/ Tuner / Flip / Effect"
 end
 
-if(cardtype==4194337)
+if(type==4194337)
 then
-cardtypename = "/ Toon / Effect"
+typename = "/ Toon / Effect"
 end
 
-if(cardtype==6388609)
+if(type==6388609)
 then
-cardtypename = "/ XYZ"
+typename = "/ XYZ"
 end
 
-if(cardtype==8388641)
+if(type==8388641)
 then
-cardtypename = "/ XYZ / Effect"
+typename = "/ XYZ / Effect"
 end
 
-if(cardtype==16777233)
+if(type==16777233)
 then
-cardtypename = "/ Pendulum"
+typename = "/ Pendulum"
 end
 
-if(cardtype==16777249)
+if(type==16777249)
 then
-cardtypename = "/ Pendulum / Effect"
+typename = "/ Pendulum / Effect"
 end
 
-if(cardtype==16777313)
+if(type==16777313)
 then
-cardtypename = "/ Fusion / Pendulum / Effect"
+typename = "/ Fusion / Pendulum / Effect"
 end
 
-if(cardtype==16781345)
+if(type==16781345)
 then
-cardtypename = "/ Tuner / Pendulum / Effect"
+typename = "/ Tuner / Pendulum / Effect"
 end
 
-if(cardtype==16785441)
+if(type==16785441)
 then
-cardtypename = "/ Synchro / Pendulum / Effect"
+typename = "/ Synchro / Pendulum / Effect"
 end
 
-if(cardtype==18874401)
+if(type==18874401)
 then
-cardtypename = "/ Flip / Pendulum / Effect"
+typename = "/ Flip / Pendulum / Effect"
 end
 
-if(cardtype==25165857)
+if(type==25165857)
 then
-cardtypename = "/ XYZ / Pendulum / Effect"
+typename = "/ XYZ / Pendulum / Effect"
 end
 
 if(attribute==1)

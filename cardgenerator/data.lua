@@ -1,10 +1,10 @@
 id=1001
-link=0
-text = "This is Trap Hole!";
-stars = 0;
-cardtype = 4;
-eftext = "When your opponent Normal or Flip summon 1 monster with 1000 or more ATK, destroy this monster.";
+alias=0
+type=4;
 atk=0;
 def=0;
-type=0
+level = 0;
+race=0
 attribute=0
+text = "This is Trap Hole!";
+eftext = "When your opponent Normal or Flip summon 1 monster with 1000 or more ATK, destroy this monster.";

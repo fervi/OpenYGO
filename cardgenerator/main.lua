@@ -35,7 +35,7 @@ love.graphics.rectangle("line", 4, 4, 173, 250)
 -- add card background
 
 -- normal
-if(cardtype==17)
+if(type==17)
 then
 
 local greyscale = gradient {
@@ -48,7 +48,7 @@ drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 end
 
 -- spell
-if((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or (cardtype==262146 or cardtype==524290)
+if((type==2 or type==130) or (type==65538 or type==131074)) or (type==262146 or type==524290)
 then
 
 local greyscale = gradient {
@@ -61,7 +61,7 @@ drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 end
 
 -- trap
-if((cardtype==4 or cardtype==131076) or cardtype==1048580)
+if((type==4 or type==131076) or type==1048580)
 then
 
 local greyscale = gradient {
@@ -74,7 +74,7 @@ drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 end
 
 -- effect
-if(((cardtype==33 or cardtype==545) or (cardtype==1057 or cardtype==2081)) or (cardtype==2097185 or cardtype==4194337))
+if(((type==33 or type==545) or (type==1057 or type==2081)) or (type==2097185 or type==4194337))
 then
 
 local greyscale = gradient {
@@ -87,7 +87,7 @@ drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 end
 
 -- fusion
-if(cardtype==65 or cardtype==97)
+if(type==65 or type==97)
 then
 
 local greyscale = gradient {
@@ -100,7 +100,7 @@ drawinrect(greyscale, 0, 0, love.graphics.getWidth(), love.graphics.getHeight())
 end
 
 -- ritual
-if(cardtype==129 or cardtype==161) or (cardtype==673)
+if(type==129 or type==161) or (type==673)
 then
 
 local greyscale = gradient {
@@ -129,15 +129,15 @@ love.graphics.print(text, 12, 4)
 end
 
 
--- add stars
-if(((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or (cardtype==262146 or cardtype==524290) or ((cardtype==4 or cardtype==131076) or cardtype==1048580))
+-- add level
+if(((type==2 or type==130) or (type==65538 or type==131074)) or (type==262146 or type==524290) or ((type==4 or type==131076) or type==1048580))
 then
-if((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or (cardtype==262146 or cardtype==524290)
+if((type==2 or type==130) or (type==65538 or type==131074)) or (type==262146 or type==524290)
 then
 love.graphics.print('[SPELL CARD]', 97, 20)
 end
 
-if((cardtype==4 or cardtype==131076) or cardtype==1048580)
+if((type==4 or type==131076) or type==1048580)
 then
 love.graphics.print('[TRAP CARD]', 103, 20)
 end
@@ -146,11 +146,11 @@ love.graphics.setFont(fontcardtextbig)
 love.graphics.draw(gfx_star, 154, 24, 0, 0.5, 0.5, 0, 0);
 
 love.graphics.setFont(fontcardtextbig)
-if(stars>9)
+if(level>9)
 then
-love.graphics.print(stars .. 'x', 135, 24)
+love.graphics.print(level .. 'x', 135, 24)
 else
-love.graphics.print(stars .. 'x', 140, 24)
+love.graphics.print(level .. 'x', 140, 24)
 end
 
 end
@@ -162,27 +162,27 @@ then
 love.graphics.print(attrname, 10, 24)
 else
 
-if(cardtype==65538)
+if(type==65538)
 then
 love.graphics.print("Quick-Play", 10, 24)
 end
 
-if(cardtype==131074 or cardtype==131076)
+if(type==131074 or type==131076)
 then
 love.graphics.print("Continuous", 10, 24)
 end
 
-if(cardtype==262146)
+if(type==262146)
 then
 love.graphics.print("Equip", 10, 24)
 end
 
-if(cardtype==524290)
+if(type==524290)
 then
 love.graphics.print("Field", 10, 24)
 end
 
-if(cardtype==1048580)
+if(type==1048580)
 then
 love.graphics.print("Counter", 10, 24)
 end
@@ -193,7 +193,7 @@ end
 love.graphics.rectangle("line", (resolution_x/2)-(155/2), 40, 155, 155)
 
 -- Draw card text border
-if(((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or (cardtype==262146 or cardtype==524290) or ((cardtype==4 or cardtype==131076) or cardtype==1048580))
+if(((type==2 or type==130) or (type==65538 or type==131074)) or (type==262146 or type==524290) or ((type==4 or type==131076) or type==1048580))
 then
 love.graphics.rectangle("line", (resolution_x/2)-(155/2), 200, 155, 50)
 else
@@ -204,11 +204,11 @@ end
 
 -- Draw card text
 love.graphics.setFont(fontcardtext)
-if(((cardtype==2 or cardtype==130) or (cardtype==65538 or cardtype==131074)) or (cardtype==262146 or cardtype==524290) or ((cardtype==4 or cardtype==131076) or cardtype==1048580))
+if(((type==2 or type==130) or (type==65538 or type==131074)) or (type==262146 or type==524290) or ((type==4 or type==131076) or type==1048580))
 then
 love.graphics.printf(eftext, 12, 202, 150, "left")
 else
-love.graphics.printf("[ " .. typename .. " " .. cardtypename .. " ]" .. "\n" .. eftext, 12, 202, 125, "left")
+love.graphics.printf("[ " .. racename .. " " .. typename .. " ]" .. "\n" .. eftext, 12, 202, 125, "left")
 love.graphics.setFont(fontcardtextbig)
 love.graphics.printf("ATK:\n" .. atk .. "\nDEF:\n" .. def, 140, 202, 25, "left")
 end
@@ -227,7 +227,7 @@ then
 exists = love.filesystem.exists( id..'.jpg' )
 screenshot = love.graphics.newScreenshot();
 screenshot:encode(id..'.jpg', 'jpg');
-love.filesystem.write("aaa", 'INSERT INTO "datas" VALUES('..id..',3,'..link..',0,'..cardtype..','..atk..','..def..','..stars..','..type..','..attribute..',0);\n'.."INSERT INTO 'texts' VALUES("..id..",'"..text.."','"..eftext.."','','','','','','','','','','','','','','','','');\n")
+love.filesystem.write("aaa", 'INSERT INTO "datas" VALUES('..id..',3,'..alias..',0,'..type..','..atk..','..def..','..level..','..race..','..attribute..',0);\n'.."INSERT INTO 'texts' VALUES("..id..",'"..text.."','"..eftext.."','','','','','','','','','','','','','','','','');\n")
 love.event.push('quit')
 end
 end
