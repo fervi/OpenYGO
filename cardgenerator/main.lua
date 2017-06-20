@@ -154,37 +154,36 @@ love.graphics.print(level .. 'x', 140, 24)
 end
 
 end
---love.graphics.setFont(fontcardnamesmall)
+
 -- Add card attribute
 if(attribute~=0)
 then
-
-love.graphics.print(attrname, 10, 24)
+love.graphics.print(attrname, 10, 21)
 else
 
 if(type==65538)
 then
-love.graphics.print("Quick-Play", 10, 24)
+love.graphics.print("Quick-Play", 10, 21)
 end
 
 if(type==131074 or type==131076)
 then
-love.graphics.print("Continuous", 10, 24)
+love.graphics.print("Continuous", 10, 21)
 end
 
 if(type==262146)
 then
-love.graphics.print("Equip", 10, 24)
+love.graphics.print("Equip", 10, 21)
 end
 
 if(type==524290)
 then
-love.graphics.print("Field", 10, 24)
+love.graphics.print("Field", 10, 21)
 end
 
 if(type==1048580)
 then
-love.graphics.print("Counter", 10, 24)
+love.graphics.print("Counter", 10, 21)
 end
 
 end
