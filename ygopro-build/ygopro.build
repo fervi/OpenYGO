@@ -10,6 +10,9 @@ cd ygopro
 git clone https://github.com/Fluorohydride/ygopro-core.git ocgcore
 #git clone https://github.com/Fluorohydride/ygopro-scripts.git script
 premake4 gmake
+if pkg-config --exists lua52; then
+  sed -e "s/ -llua / $(pkg-config --libs lua52) /g" -i build/ygopro.make
+fi
 make -Cbuild
 
 cp bin/debug/ygopro ../binaries/
