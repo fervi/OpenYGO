@@ -1,6 +1,7 @@
 #!/bin/sh
 
-font=ttf-bitstream-vera
+font="ttf-bitstream-vera-1.10"
+fonturl="http://ftp.gnome.org/pub/GNOME/sources/ttf-bitstream-vera/1.10/${font}.tar.bz2"
 
 mkdir binaries
 mkdir binaries/deck
@@ -21,15 +22,14 @@ cp strings.conf ../binaries/
 cp -r textures ../binaries/
 cp -r script ../binaries/
 find ../binaries/textures/*.png -maxdepth 1 -type f -exec pngcrush -ow -rem allb -reduce {} \;
+
 cd ../binaries/
-apt-get download $font
-unar $font*
-cd $font*
-unar data.tar.gz
-cd ..
+wget "$fonturl"
+tar -xf "$font.tar.bz2"
+chmod -R u+w "$font"
 mkdir fonts
-cp $font*/data/usr/share/fonts/truetype/$font/Vera.ttf fonts/vera.ttf
-cp $font*/data/usr/share/fonts/truetype/$font/VeraBd.ttf fonts/verabd.ttf
+cp $font/Vera.ttf fonts/vera.ttf
+cp $font/VeraBd.ttf fonts/verabd.ttf
 rm -r $font*
 sed -e "s/c:\/windows\/fonts\/simsun.ttc/fonts\/vera.ttf/g" system.conf > system.bak
 sed -e "s/c:\/windows\/fonts\/arialbd.ttf/fonts\/verabd.ttf/g" system.bak > system.conf
