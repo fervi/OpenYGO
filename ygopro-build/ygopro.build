@@ -9,7 +9,8 @@ mkdir binaries/replay
 git clone https://github.com/Fluorohydride/ygopro.git
 cd ygopro 
 git clone https://github.com/Fluorohydride/ygopro-core.git ocgcore
-#git clone https://github.com/Fluorohydride/ygopro-scripts.git script
+git clone https://github.com/Fluorohydride/ygopro-scripts.git script
+rm script/c[0-9]*
 premake4 gmake
 if pkg-config --exists lua52; then
   sed -e "s/ -llua / $(pkg-config --libs lua52) /g" -i build/ygopro.make
