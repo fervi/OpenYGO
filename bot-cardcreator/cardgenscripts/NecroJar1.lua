@@ -9,3 +9,4 @@ def=300;
 level=3;
 race=8;
 attribute=32;
+limit=3;

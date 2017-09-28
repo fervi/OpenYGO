@@ -9,3 +9,4 @@ atk=1500;
 def=1200;
 race=64;
 attribute=2;
+limit=3;

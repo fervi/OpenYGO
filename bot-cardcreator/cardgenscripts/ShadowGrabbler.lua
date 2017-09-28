@@ -8,4 +8,5 @@ level=3;
 atk=500;
 def=700;
 race=8;
-attribute=32
+attribute=32;
+limit=3;

@@ -45,6 +45,8 @@ ls  > ../cardb.tmp
 sed -e "s/.lua//g" ../cardb.tmp > ../cardb
 rm ../cardb.tmp
 cd ..
+echo "#[OpenYGO]" > lflist.conf
+echo "!OpenYGO" >> lflist.conf
 
 while [ -s cardb ]; do
 line=$(head -n 1 cardb)
@@ -62,6 +64,11 @@ mv cardb.tmp cardb
 source cardgenscripts/$line.lua
 cp scripts/$line.lua build/c$id.lua
 convert build/$id.jpg -resize 44x64 build/thumbnail/$id.jpg
+
+if [ $limit -lt 3 ]; then
+echo $id $limit >> lflist.conf
+fi
+
 done
 
 cat emptydb card-database > carddb.tmp

@@ -9,3 +9,4 @@ def=0;
 level=0;
 race=0;
 attribute=0;
+limit=3;
