@@ -1,4 +1,3 @@
---落とし穴
 function c1001.initial_effect(c)
 	--Activate(summon)
 	local e1=Effect.CreateEffect(c)

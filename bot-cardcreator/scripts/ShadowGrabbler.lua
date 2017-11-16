@@ -1,4 +1,3 @@
---人喰い虫
 function c1002.initial_effect(c)
 	--flip
 	local e1=Effect.CreateEffect(c)

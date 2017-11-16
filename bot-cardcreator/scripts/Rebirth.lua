@@ -1,4 +1,3 @@
---死者蘇生
 function c1015.initial_effect(c)
 	--Activate
 	local e1=Effect.CreateEffect(c)

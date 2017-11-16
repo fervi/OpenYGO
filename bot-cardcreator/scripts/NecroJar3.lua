@@ -1,4 +1,3 @@
---サイバーポッド
 function c1007.initial_effect(c)
 	--flip
 	local e1=Effect.CreateEffect(c)

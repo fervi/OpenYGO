@@ -1,4 +1,3 @@
---ブラック・ホール
 function c1014.initial_effect(c)
 	--Activate
 	local e1=Effect.CreateEffect(c)

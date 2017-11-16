@@ -1,4 +1,3 @@
---大嵐
 function c1013.initial_effect(c)
 	--Activate
 	local e1=Effect.CreateEffect(c)

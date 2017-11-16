@@ -1,4 +1,3 @@
---カオスポッド
 function c1006.initial_effect(c)
 	--flip
 	local e1=Effect.CreateEffect(c)

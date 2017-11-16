@@ -1,4 +1,3 @@
---グレイ・ウイング
 function c1011.initial_effect(c)
 	--multiatk
 	local e1=Effect.CreateEffect(c)

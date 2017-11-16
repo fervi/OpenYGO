@@ -1,4 +1,3 @@
---サイクロン
 function c1017.initial_effect(c)
 	--Activate
 	local e1=Effect.CreateEffect(c)
