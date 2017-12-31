@@ -142,15 +142,13 @@ then
 love.graphics.print('[TRAP CARD]', 103, 20)
 end
 else
-love.graphics.setFont(fontcardtextbig)
 love.graphics.draw(gfx_star, 154, 24, 0, 0.5, 0.5, 0, 0);
 
-love.graphics.setFont(fontcardtextbig)
 if(level>9)
 then
-love.graphics.print(level .. 'x', 135, 24)
+love.graphics.print(level .. 'x', 135, 20)
 else
-love.graphics.print(level .. 'x', 140, 24)
+love.graphics.print(level .. 'x', 140, 20)
 end
 
 end
@@ -158,32 +156,32 @@ end
 -- Add card attribute
 if(attribute~=0)
 then
-love.graphics.print(attrname, 10, 21)
+love.graphics.print(attrname, 10, 20)
 else
 
 if(type==65538)
 then
-love.graphics.print("Quick-Play", 10, 21)
+love.graphics.print("Quick-Play", 10, 20)
 end
 
 if(type==131074 or type==131076)
 then
-love.graphics.print("Continuous", 10, 21)
+love.graphics.print("Continuous", 10, 20)
 end
 
 if(type==262146)
 then
-love.graphics.print("Equip", 10, 21)
+love.graphics.print("Equip", 10, 20)
 end
 
 if(type==524290)
 then
-love.graphics.print("Field", 10, 21)
+love.graphics.print("Field", 10, 20)
 end
 
 if(type==1048580)
 then
-love.graphics.print("Counter", 10, 21)
+love.graphics.print("Counter", 10, 20)
 end
 
 end
