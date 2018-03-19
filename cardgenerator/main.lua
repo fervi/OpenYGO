@@ -223,7 +223,7 @@ if(exists==false)
 then
 exists = love.filesystem.exists( id..'.jpg' )
 screenshot = love.graphics.newScreenshot();
-screenshot:encode(id..'.jpg', 'jpg');
+screenshot:encode('png', id..'.png');
 love.filesystem.write("aaa", 'INSERT INTO "datas" VALUES('..id..',3,'..alias..',0,'..type..','..atk..','..def..','..level..','..race..','..attribute..',0);\n'.."INSERT INTO 'texts' VALUES("..id..",'"..text.."','"..eftext.."','','','','','','','','','','','','','','','','');\n")
 love.event.push('quit')
 end

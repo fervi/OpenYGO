@@ -55,15 +55,20 @@ cp sprites/$line.png ../cardgenerator/sprites/cardgraph.png
 cd ../cardgenerator
 ./runme
 cd ../bot-cardcreator
+source cardgenscripts/$line.lua
+convert /home/$USER/.local/share/love/cardgenerator/$id.png /home/$USER/.local/share/love/cardgenerator/$id.jpg
+rm /home/$USER/.local/share/love/cardgenerator/$id.png
 mv /home/$USER/.local/share/love/cardgenerator/*.jpg build/
 cat /home/$USER/.local/share/love/cardgenerator/aaa >> card-database
 sed '1d' cardb > cardb.tmp
 rm cardb
 rm /home/$USER/.local/share/love/cardgenerator/aa
+
+
 mv cardb.tmp cardb
-source cardgenscripts/$line.lua
 cp scripts/$line.lua build/c$id.lua
 convert build/$id.jpg -resize 44x64 build/thumbnail/$id.jpg
+
 
 if [ $limit -lt 3 ]; then
 echo $id $limit >> lflist.conf
